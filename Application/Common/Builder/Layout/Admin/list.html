@@ -1,0 +1,18 @@
+<extend name="./Application/Admin/View/Public/layout.html"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CUI__/css/cui.extend.min.css">
+    <include file="./Application/Common/Builder/style.html" />
+</block>
+<block name='left-nav'>
+        <include file="./Application/Admin/View/Public/leftnav.html" />
+</block>
+<block name="main">
+    <include file="./Application/Common/Builder/listbuilder.html" />
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__CUI__/js/cui.extend.min.js"></script>
+    <include file="./Application/Common/Builder/javascript.html" />
+</block>
+

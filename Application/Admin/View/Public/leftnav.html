@@ -1,0 +1,141 @@
+ <div class="container-fluid with-top-navbar">
+            <div class="row">
+                <!-- 后台左侧导航 -->
+                <div id="sidebar" class="col-xs-12 col-sm-2 sidebar tab-content">
+                    <!-- 模块菜单 -->
+                   <nav class="navside navside-default" role="navigation">
+                        <?php if ($active_nav=='首页'): ?>
+                            <ul class="nav navside-nav navside-first">
+                                <li>
+                                     <a data-toggle="collapse" href="#navside-collapse--1">
+                                            <i class="fa fa-folder-open-o"></i>
+                                            <span class="nav-label">网站情况</span>
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                        <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
+                                                     <li <?php if($meta_title=='系统信息'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Index/index')}" >
+                                                            <i class="fa fa-wrench"></i>
+                                                            <span class="nav-label">系统信息</span>
+                                                        </a>
+                                                    </li>
+                                                     <li <?php if($meta_title=='网站近期注册人数一览'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Index/showRegisterNumber')}">
+                                                            <i class="fa fa-area-chart"></i>
+                                                            <span class="nav-label">网站近期注册人数一览</span>
+                                                        </a>
+                                                    </li> <li <?php if($meta_title=='网站现存储存空间'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Index/showStorageSpace')}">
+                                                            <i class="fa fa-adjust"></i>
+                                                            <span class="nav-label">网站现存储存空间</span>
+                                                        </a>
+                                                    </li>                                         
+                                         </ul>
+                                <li>
+                                        <a data-toggle="collapse" href="#navside-collapse--2">
+                                            <i class="fa fa-folder-open-o"></i>
+                                            <span class="nav-label">消息发布</span>
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                         <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--2">
+                                                     <li <?php if($meta_title=='首页消息发布'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Inform/index')}">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                            <span class="nav-label">首页消息发布</span>
+                                                        </a>
+                                                    </li> <li <?php if($meta_title=='快捷链接管理'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Link/index')}" >
+                                                            <i class="fa fa-link"></i>
+                                                            <span class="nav-label">快捷链接管理</span>
+                                                        </a>
+                                                    </li>
+                                                     <li <?php if($meta_title=='导航管理'):?>class="active" <?php endif; ?>>
+                                                        <a href="{:U('Nav/index')}" >
+                                                            <i class="fa fa-map-signs"></i>
+                                                            <span class="nav-label">导航管理</span>
+                                                        </a>
+                                                    </li>                                           
+                                        </ul>
+
+                                </li>              
+                            </ul>
+                        <?php else : ?>
+                            <?php if($active_nav=='用户管理'):?>
+                                 <ul class="nav navside-nav navside-first">
+                                        <li>
+                                                <a data-toggle="collapse" href="#navside-collapse--1">
+                                                    <i class="fa fa-folder-open-o"></i>
+                                                    <span class="nav-label">系统设置</span>
+                                                    <span class="fa arrow"></span>
+                                                </a>
+                                                <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
+                                                        <li <?php if($meta_title=='用户设置'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-wrench"></i>
+                                                                    <span class="nav-label">用户设置</span>
+                                                                </a>
+                                                            </li><li <?php if($meta_title=='用户统计'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-area-chart"></i>
+                                                                    <span class="nav-label">用户统计</span>
+                                                                </a>
+                                                            </li><li <?php if($meta_title=='用户列表'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-list"></i>
+                                                                    <span class="nav-label">用户列表</span>
+                                                                </a>
+                                                            </li><li <?php if($meta_title=='用户类型'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}">
+                                                                    <i class="fa fa-user"></i>
+                                                                    <span class="nav-label">用户类型</span>
+                                                                </a>
+                                                              </li>
+                                                 </ul>
+                                        </li>
+                                </ul>
+                            <?php else : ?>
+                                <?php if($active_nav=='系统设置'):?>
+                                    <ul class="nav navside-nav navside-first">
+                                        <li>
+                                                <a data-toggle="collapse" href="#navside-collapse--1">
+                                                    <i class="fa fa-folder-open-o"></i>
+                                                    <span class="nav-label">权限管理</span>
+                                                    <span class="fa arrow"></span>
+                                                </a>
+                                                <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
+                                                        <li <?php if($meta_title=='用户权限'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-wrench"></i>
+                                                                    <span class="nav-label">用户权限</span>
+                                                                </a>
+                                                            </li><li <?php if($meta_title=='管理员权限'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-area-chart"></i>
+                                                                    <span class="nav-label">管理员权限</span>
+                                                                </a>
+                                                            </li>
+                                                 </ul>
+                                        </li>
+                                        <li>
+                                                <a data-toggle="collapse" href="#navside-collapse--1">
+                                                    <i class="fa fa-folder-open-o"></i>
+                                                    <span class="nav-label">文件管理</span>
+                                                    <span class="fa arrow"></span>
+                                                </a>
+                                                <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
+                                                       <li <?php if($meta_title=='上传设置'):?>class="active" <?php endif; ?>>
+                                                                <a href="{:U('Index/index')}" >
+                                                                    <i class="fa fa-wrench"></i>
+                                                                    <span class="nav-label">上传设置</span>
+                                                                </a>
+                                                        </li>
+                                                 </ul>
+                                        </li>
+                                </ul>
+                                <?php endif; ?>
+                          <?php endif; ?>
+                       <?php endif; ?>
+                    </nav>
+                </div>
+            </div>
+        </div>

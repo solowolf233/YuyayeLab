@@ -1,0 +1,100 @@
+<extend name="Public/layout"/>
+<block name='left-nav'>
+        <include file="./Application/Admin/View/Public/leftnav.html" />
+</block>
+<block name="main">
+                    <div role="tabpanel" class="fade in active" id="home">
+                        <div class="dashboard clearfix">
+                            <div class="col-xs-12 col-sm-6 col-lg-4 ct-update">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="update pull-right"></div>
+                                        <i class="fa fa-cog"></i> 系统信息
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-condensed text-overflow">
+                                            <tbody>
+                                                <tr>
+                                                    <td>{:C('PRODUCT_NAME')}版本</td>
+                                                    <td>
+                                                        <span class="version">
+                                                            v{:C('CURRENT_VERSION')}
+                                                        </span>
+                                                    </td>
+                                            </tr>
+                                                <tr>
+                                                    <td>ThinkPHP版本</td>
+                                                    <td>{$Think.VERSION}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>服务器操作系统</td>
+                                                    <td>{$Think.const.PHP_OS}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>运行环境</td>
+                                                    <td>
+                                                        <?php
+                                                            $server_software = explode(' ', $_SERVER['SERVER_SOFTWARE']);
+                                                            echo $server_software[0];
+                                                        ?>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PHP版本</td>
+                                                    <td><?php echo PHP_VERSION; ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MYSQL版本</td>
+                                                    <td><php>$system_info_mysql = M()->query("select version() as v;");</php>{$system_info_mysql.0.v}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>上传限制</td>
+                                                    <td>{:ini_get('upload_max_filesize')}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="panel-actions"></div>
+                                        <i class="fa fa-th-list"></i> 开发者信息
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-condensed">
+                                            <tbody>
+                                                <tr>
+                                                    <td>网站标题</td>
+                                                    <td>{:C('WEB_SITE_TITLE')}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>网站内容</td>
+                                                    <td>{:C('WEB_SITE_INFO')}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>项目开发团队</td>
+                                                    <td>{:C('DEVELOP_TEAM')}</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td>核心队员</td>
+                                                    <td>施大焯</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>联系我们</td>
+                                                    <td>
+                                                        502414680@qq.com
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+           
+</block>
