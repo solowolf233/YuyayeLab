@@ -12,8 +12,8 @@ class SystemController extends  PublicController
     public function index()
     {
        
-        $this->active_left_nav="权限管理";
-        $this->meta_title="用户权限";
+        $this->active_left_nav="发布设置";
+        $this->meta_title="消息设置";
         $this->display();
 
     }

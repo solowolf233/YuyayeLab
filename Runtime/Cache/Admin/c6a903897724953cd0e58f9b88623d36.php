@@ -20,8 +20,6 @@
     <link rel="stylesheet" type="text/css" href="/yuyaye/./Application/Admin/View/Public/css/theme/<?php echo C('ADMIN_THEME');?>.css">
     <link rel="stylesheet" type="text/css" href="/yuyaye/Public/libs/animate/animate.min.css">
     
-    <link rel="stylesheet" type="text/css" href="/yuyaye/Public/libs/cui/css/cui.extend.min.css">
-
     <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
         <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -251,28 +249,14 @@
                 <!-- 后台内容部分 -->
                 <div class="tab-content ct-tab-content">
                     
-    <div class="chart">
-        <div class="panel-body">
-            <div class="col-xs-12 col-sm-6 col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-area-chart"></i> 用户增长统计
+                    <div role="tabpanel" class="fade in active" id="home">
+                     
+                                   <div id="canvas">
+ 
+                                    </div>
                     </div>
-                    <div class="panel-body">
-                        <h5 class="text-center">
-                            <form action="<?php echo U('');?>" method="get">
-                                <input id="start_date" name="start_date" value="<?php echo ($start_date); ?>"> 至
-                                <input id="end_date" name="end_date" value="<?php echo ($end_date); ?>">
-                               
-                                <input id="submit" type="submit" class="btn btn-xs btn-default search-btn" value="查询">
-                            </form>
-                        </h5>
-                        <canvas id="mychart" style="width:100%;height:300px;"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 
                         <div class="clearfix footer">
                             <div class="navbar navbar-default" role="navigation">
@@ -318,53 +302,49 @@
                 }
             </script>
             
-    <script type="text/javascript" src="/yuyaye/Public/libs/cui/js/cui.extend.min.js"></script>
-    <script src="/yuyaye/Public/libs/chart/1.x/Chart.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // 用户增长曲线图
-            var chart_data = {
-                labels: <?php echo ($user_reg_date); ?>,
-                datasets: [{
-                    label: "用户增长曲线图",
-                    fillColor: "rgba(151,187,205,0.2)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(151,187,205,1)",
-                    data: <?php echo ($user_reg_count); ?>
-                }]
-            };
-            var chart_options = {
-                scaleLineColor : "rgba(0,0,0,.1)", //X/Y轴的颜色
-                scaleLineWidth : 1, //X/Y轴的宽度
-            };
-            var chart_element = document.getElementById("mychart").getContext("2d");
-            var myLine = new Chart(chart_element).Line(chart_data, chart_options);
-
-            // 日期
-            $('#start_date').datetimepicker({
-                format      : 'yyyy-mm-dd',
-                autoclose   : true,
-                minView     : 'month',
-                todayBtn    : 'linked',
-                language    : 'en',
-                initialDate : '<?php echo ($start_date); ?>',
-                fontAwesome : true,
-            });
-            $('#end_date').datetimepicker({
-                format      : 'yyyy-mm-dd',
-                autoclose   : true,
-                minView     : 'month',
-                todayBtn    : 'linked',
-                language    : 'en',
-                initialDate : '<?php echo ($end_date); ?>',
-                fontAwesome : true,
-            });
+           <script src="/yuyaye/Public/libs/chart/acharts_min.js"></script>
+                <script type="text/javascript">
+        var chart = new AChart({
+          theme : AChart.Theme.SmoothBase,
+          id : 'canvas',
+          width : 950,
+          height : 500,
+          legend : null ,//不显示图例
+          seriesOptions : { //设置多个序列共同的属性
+            pieCfg : {
+              allowPointSelect : true,
+              labels : {
+                distance : 40,
+                label : {
+                  //文本信息可以在此配置
+                },
+                renderer : function(value,item){ //格式化文本
+                  return value + ' ' + (item.point.percent * 100).toFixed(2)  + '%';
+                }
+              }
+            }
+          },
+          tooltip : {
+            pointRenderer : function(point){
+              return (point.percent * 100).toFixed(2)+ '%';
+            }
+          },
+          series : [{
+              type: 'pie',
+              name: 'Browser share',
+              data: [
+                ['保密',   <?php echo ($privary); ?>],
+                ['男',       <?php echo ($female); ?>],
+                ['女',    <?php echo ($male); ?>],
+              ]
+          }]
         });
-    </script>
+ 
+        chart.render();
+      </script>
 
+
+            
         </div>
     </div>
 </body>

@@ -1,0 +1,391 @@
+[ 2016-05-24T12:12:06+08:00 ] ::1 /yuyaye/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001015s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001664s ]
+NOTIC: [8] Undefined variable: meta_keywords E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 10 行.
+SQL: select version() as v; [ RunTime:0.0057s ]
+NOTIC: [8] Undefined variable: _admin_tabs E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 383 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.542269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.542346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008349s ]
+
+[ 2016-05-24T12:12:07+08:00 ] ::1 /yuyaye/index.php/Admin/Update/checkVersion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+ERR: 无法加载控制器:Update
+
+[ 2016-05-24T12:26:54+08:00 ] ::1 /yuyaye/index.php/Admin/User/config.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.041050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041141s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ddf_config` [ RunTime:0.0373s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "register" ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "register_type" ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "ban_username" ) LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: ban_username E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 41 行.
+NOTIC: [2048] Declaration of Common\Builder\FormBuilder::display() should be compatible with Common\Controller\CommonController::display($template = '', $charset = '', $contentType = '', $content = '', $prefix = '') E:\myphp\DocumentRoot\yuyaye\Application\Common\Builder\FormBuilder.class.php 第 16 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007506s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007676s ]
+NOTIC: [8] Undefined variable: meta_keywords E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 10 行.
+NOTIC: [8] Undefined variable: _admin_tabs E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 2044 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.650146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.650223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.103990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.104076s ]
+
+[ 2016-05-24T12:26:55+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:27:58+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:28:09+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:28:11+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:28:14+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:28:28+08:00 ] ::1 /yuyaye/index.php/Admin/Index/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+ERR: 非法操作:statistics
+
+[ 2016-05-24T12:28:30+08:00 ] ::1 /yuyaye/index.php/Admin/User/config.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ddf_config` [ RunTime:0.0020s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "register" ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "register_type" ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `ddf_config` WHERE ( config = "ban_username" ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: ban_username E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 41 行.
+NOTIC: [2048] Declaration of Common\Builder\FormBuilder::display() should be compatible with Common\Controller\CommonController::display($template = '', $charset = '', $contentType = '', $content = '', $prefix = '') E:\myphp\DocumentRoot\yuyaye\Application\Common\Builder\FormBuilder.class.php 第 16 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006630s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006729s ]
+NOTIC: [8] Undefined variable: meta_keywords E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 10 行.
+NOTIC: [8] Undefined variable: _admin_tabs E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\0cc29a1d3a1913d2b9da175965bdaaca.php 第 2044 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.378615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.378673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-05-24T12:28:41+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+ERR: Think\Controller:diaplay方法不存在！
+
+[ 2016-05-24T12:29:02+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000915s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/css/dpl-min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/css/page-min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/config-min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/css/prettify.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/css/bui-min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.048867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/jquery-1.8.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/bui-min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/bui-min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/config-min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:29:03+08:00 ] ::1 /yuyaye/index.php/Admin/assets/js/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+ERR: 无法加载控制器:Assets
+
+[ 2016-05-24T12:30:34+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002764s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002117s ]
+
+[ 2016-05-24T12:31:11+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001611s ]
+
+[ 2016-05-24T12:31:48+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2016-05-24T12:31:51+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-24T12:33:14+08:00 ] ::1 /yuyaye/index.php/Admin/User/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+NOTIC: [2048] Declaration of Admin\Controller\UserController::setStatus() should be compatible with Admin\Controller\PublicController::setStatus($model, $script = false) E:\myphp\DocumentRoot\yuyaye\Application\Admin\Controller\UserController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000627s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000693s ]
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 5 行.
+NOTIC: [8] Undefined variable: meta_keywords E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 9 行.
+NOTIC: [8] Undefined variable: meta_description E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 10 行.
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 161 行.
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 166 行.
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 171 行.
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 176 行.
+NOTIC: [8] Undefined variable: meta_title E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 247 行.
+NOTIC: [8] Undefined variable: _admin_tabs E:\myphp\DocumentRoot\yuyaye\Runtime\Cache\Admin\c6a903897724953cd0e58f9b88623d36.php 第 381 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+

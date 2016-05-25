@@ -101,7 +101,7 @@ class LinkController extends PublicController
      */
     public function add() {
         if (IS_POST) {
-            $link_object = D('link');
+            $link_object = D('Link');
             $data = $link_object->create();
             if ($data) {
                 $id = $link_object->add($data);
@@ -122,7 +122,7 @@ class LinkController extends PublicController
                     ->addFormItem('id', 'hidden', 'ID', 'ID')
                     ->addFormItem('link_name', 'text', '快捷链接名称名称', '快捷链接名称')
                     ->addFormItem('link_href', 'text', '快捷链接地址', '快捷链接地址')
-                    ->setFormData($info)
+                    ->addFormItem('sort', 'kindeditor', '排序', '用于显示的顺序')
                     ->display();
         }
     }

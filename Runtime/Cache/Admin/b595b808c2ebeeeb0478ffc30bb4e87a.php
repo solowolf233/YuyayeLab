@@ -52,17 +52,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="<?php echo U('User/config');?>" >
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+                <li>
                     <a href="<?php echo U('System/index');?>" >
                         <i class="fa fa-cog"></i>
                         <span>系统设置</span>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo U('User/index');?>" >
-                        <i class="fa fa-user"></i>
-                        <span>用户管理</span>
-                    </a>
-                </li>
+                
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="<?php echo U('Admin/Index/removeRuntime');?>" class="ajax-get no-refresh"><i class="fa fa-trash"></i> 清空缓存</a></li>
@@ -153,29 +154,29 @@
                                         <li>
                                                 <a data-toggle="collapse" href="#navside-collapse--1">
                                                     <i class="fa fa-folder-open-o"></i>
-                                                    <span class="nav-label">系统设置</span>
+                                                    <span class="nav-label">用户管理</span>
                                                     <span class="fa arrow"></span>
                                                 </a>
                                                 <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
                                                         <li <?php if($meta_title=='用户设置'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/config');?>" >
                                                                     <i class="fa fa-wrench"></i>
                                                                     <span class="nav-label">用户设置</span>
                                                                 </a>
                                                             </li><li <?php if($meta_title=='用户统计'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/statistics');?>" >
                                                                     <i class="fa fa-area-chart"></i>
                                                                     <span class="nav-label">用户统计</span>
                                                                 </a>
                                                             </li><li <?php if($meta_title=='用户列表'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/user');?>" >
                                                                     <i class="fa fa-list"></i>
                                                                     <span class="nav-label">用户列表</span>
                                                                 </a>
-                                                            </li><li <?php if($meta_title=='用户类型'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>">
+                                                            </li><li <?php if($meta_title=='管理员列表'):?>class="active" <?php endif; ?>>
+                                                                <a href="<?php echo U('User/admin');?>">
                                                                     <i class="fa fa-user"></i>
-                                                                    <span class="nav-label">用户类型</span>
+                                                                    <span class="nav-label">管理员列表</span>
                                                                 </a>
                                                               </li>
                                                  </ul>
@@ -187,21 +188,22 @@
                                         <li>
                                                 <a data-toggle="collapse" href="#navside-collapse--1">
                                                     <i class="fa fa-folder-open-o"></i>
-                                                    <span class="nav-label">权限管理</span>
+                                                    <span class="nav-label">发布设置</span>
                                                     <span class="fa arrow"></span>
                                                 </a>
                                                 <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
-                                                        <li <?php if($meta_title=='用户权限'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
-                                                                    <i class="fa fa-wrench"></i>
-                                                                    <span class="nav-label">用户权限</span>
-                                                                </a>
-                                                            </li><li <?php if($meta_title=='管理员权限'):?>class="active" <?php endif; ?>>
+                                                    <li <?php if($meta_title=='消息设置'):?>class="active" <?php endif; ?>>
                                                                 <a href="<?php echo U('Index/index');?>" >
                                                                     <i class="fa fa-area-chart"></i>
-                                                                    <span class="nav-label">管理员权限</span>
+                                                                    <span class="nav-label">消息设置</span>
                                                                 </a>
                                                             </li>
+                                                    <li <?php if($meta_title=='消息管理'):?>class="active" <?php endif; ?>>
+                                                            <a href="<?php echo U('Index/index');?>" >
+                                                                <i class="fa fa-area-chart"></i>
+                                                                <span class="nav-label">消息管理</span>
+                                                             </a>
+                                                    </li>
                                                  </ul>
                                         </li>
                                         <li>
@@ -216,6 +218,13 @@
                                                                     <i class="fa fa-wrench"></i>
                                                                     <span class="nav-label">上传设置</span>
                                                                 </a>
+                                                        </li>
+                                                         <li <?php if($meta_title=='上传列表'):?>class="active" <?php endif; ?>>
+                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                    <i class="fa fa-wrench"></i>
+                                                                    <span class="nav-label">上传列表</span>
+                                                                </a>
+                                                                
                                                         </li>
                                                  </ul>
                                         </li>

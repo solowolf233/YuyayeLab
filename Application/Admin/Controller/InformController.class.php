@@ -25,7 +25,7 @@ class InformController extends PublicController
         $keyword   = I('keyword', '', 'string');
         $condition = array('like','%'.$keyword.'%');
         $map['id|inform_title'] = array($condition, $condition, '_multi'=>true);
-        // 获取所有用户
+        // 获取所有通知
         $map['status'] = array('egt', '0'); // 禁用和正常状态
         $inform_object=D('inform');
         $data_list = $inform_object
@@ -145,7 +145,7 @@ class InformController extends PublicController
      * @author jry <598821125@qq.com>
      */
     public function setStatus(){
-        $ids = I('request.ids');
+
         
         parent::setStatus('inform');
     }

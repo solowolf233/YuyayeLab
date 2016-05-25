@@ -4,7 +4,7 @@ use Think\Model;
 /**
  * 通知信息模型
  */
-class NavModel extends Model {
+class linkModel extends Model {
     /**
      * 数据库表名
      * @author jry <598821125@qq.com>

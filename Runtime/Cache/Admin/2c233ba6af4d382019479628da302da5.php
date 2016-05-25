@@ -54,17 +54,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="<?php echo U('User/config');?>" >
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+                <li>
                     <a href="<?php echo U('System/index');?>" >
                         <i class="fa fa-cog"></i>
                         <span>系统设置</span>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo U('User/index');?>" >
-                        <i class="fa fa-user"></i>
-                        <span>用户管理</span>
-                    </a>
-                </li>
+                
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="<?php echo U('Admin/Index/removeRuntime');?>" class="ajax-get no-refresh"><i class="fa fa-trash"></i> 清空缓存</a></li>
@@ -155,29 +156,29 @@
                                         <li>
                                                 <a data-toggle="collapse" href="#navside-collapse--1">
                                                     <i class="fa fa-folder-open-o"></i>
-                                                    <span class="nav-label">系统设置</span>
+                                                    <span class="nav-label">用户管理</span>
                                                     <span class="fa arrow"></span>
                                                 </a>
                                                 <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
                                                         <li <?php if($meta_title=='用户设置'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/config');?>" >
                                                                     <i class="fa fa-wrench"></i>
                                                                     <span class="nav-label">用户设置</span>
                                                                 </a>
                                                             </li><li <?php if($meta_title=='用户统计'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/statistics');?>" >
                                                                     <i class="fa fa-area-chart"></i>
                                                                     <span class="nav-label">用户统计</span>
                                                                 </a>
                                                             </li><li <?php if($meta_title=='用户列表'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                <a href="<?php echo U('User/user');?>" >
                                                                     <i class="fa fa-list"></i>
                                                                     <span class="nav-label">用户列表</span>
                                                                 </a>
-                                                            </li><li <?php if($meta_title=='用户类型'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>">
+                                                            </li><li <?php if($meta_title=='管理员列表'):?>class="active" <?php endif; ?>>
+                                                                <a href="<?php echo U('User/admin');?>">
                                                                     <i class="fa fa-user"></i>
-                                                                    <span class="nav-label">用户类型</span>
+                                                                    <span class="nav-label">管理员列表</span>
                                                                 </a>
                                                               </li>
                                                  </ul>
@@ -189,21 +190,22 @@
                                         <li>
                                                 <a data-toggle="collapse" href="#navside-collapse--1">
                                                     <i class="fa fa-folder-open-o"></i>
-                                                    <span class="nav-label">权限管理</span>
+                                                    <span class="nav-label">发布设置</span>
                                                     <span class="fa arrow"></span>
                                                 </a>
                                                 <ul class="nav navside-nav navside-second collapse in" id="navside-collapse--1">
-                                                        <li <?php if($meta_title=='用户权限'):?>class="active" <?php endif; ?>>
-                                                                <a href="<?php echo U('Index/index');?>" >
-                                                                    <i class="fa fa-wrench"></i>
-                                                                    <span class="nav-label">用户权限</span>
-                                                                </a>
-                                                            </li><li <?php if($meta_title=='管理员权限'):?>class="active" <?php endif; ?>>
+                                                    <li <?php if($meta_title=='消息设置'):?>class="active" <?php endif; ?>>
                                                                 <a href="<?php echo U('Index/index');?>" >
                                                                     <i class="fa fa-area-chart"></i>
-                                                                    <span class="nav-label">管理员权限</span>
+                                                                    <span class="nav-label">消息设置</span>
                                                                 </a>
                                                             </li>
+                                                    <li <?php if($meta_title=='消息管理'):?>class="active" <?php endif; ?>>
+                                                            <a href="<?php echo U('Index/index');?>" >
+                                                                <i class="fa fa-area-chart"></i>
+                                                                <span class="nav-label">消息管理</span>
+                                                             </a>
+                                                    </li>
                                                  </ul>
                                         </li>
                                         <li>
@@ -218,6 +220,13 @@
                                                                     <i class="fa fa-wrench"></i>
                                                                     <span class="nav-label">上传设置</span>
                                                                 </a>
+                                                        </li>
+                                                         <li <?php if($meta_title=='上传列表'):?>class="active" <?php endif; ?>>
+                                                                <a href="<?php echo U('Index/index');?>" >
+                                                                    <i class="fa fa-wrench"></i>
+                                                                    <span class="nav-label">上传列表</span>
+                                                                </a>
+                                                                
                                                         </li>
                                                  </ul>
                                         </li>
@@ -242,28 +251,12 @@
                 <!-- 后台内容部分 -->
                 <div class="tab-content ct-tab-content">
                     
-    <div class="chart">
-        <div class="panel-body">
-            <div class="col-xs-12 col-sm-6 col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-area-chart"></i> 文件储存统计-总容量500T-已用<?php echo ($rSize); ?>T
+                     <div role="tabpanel" class="fade in active" id="home">
+                     
+                                   <div id="canvas">
+ 
+                                    </div>
                     </div>
-                    <div class="panel-body">
-                        <h5 class="text-center">
-                            <form action="<?php echo U('');?>" method="get">
-                                <input id="start_date" name="start_date" value="<?php echo ($start_date); ?>"> 至
-                                <input id="end_date" name="end_date" value="<?php echo ($end_date); ?>">
-                               
-                                <input id="submit" type="submit" class="btn btn-xs btn-default search-btn" value="查询">
-                            </form>
-                        </h5>
-                        <canvas id="mychart" style="width:100%;height:300px;"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
                         <div class="clearfix footer">
                             <div class="navbar navbar-default" role="navigation">
@@ -309,52 +302,65 @@
                 }
             </script>
             
-    <script type="text/javascript" src="/yuyaye/Public/libs/cui/js/cui.extend.min.js"></script>
-    <script src="/yuyaye/Public/libs/chart/1.x/Chart.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // 用户增长曲线图
-            var chart_data = {
-                labels: <?php echo ($user_reg_date); ?>,
-                datasets: [{
-                    label: "用户存储增长曲线图",
-                    fillColor: "rgba(151,187,205,0.2)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(151,187,205,1)",
-                    data: <?php echo ($user_reg_count); ?>
-                }]
-            };
-            var chart_options = {
-                scaleLineColor : "rgba(0,0,0,.1)", //X/Y轴的颜色
-                scaleLineWidth : 1, //X/Y轴的宽度
-            };
-            var chart_element = document.getElementById("mychart").getContext("2d");
-            var myLine = new Chart(chart_element).Line(chart_data, chart_options);
 
-            // 日期
-            $('#start_date').datetimepicker({
-                format      : 'yyyy-mm-dd',
-                autoclose   : true,
-                minView     : 'month',
-                todayBtn    : 'linked',
-                language    : 'en',
-                initialDate : '<?php echo ($start_date); ?>',
-                fontAwesome : true,
-            });
-            $('#end_date').datetimepicker({
-                format      : 'yyyy-mm-dd',
-                autoclose   : true,
-                minView     : 'month',
-                todayBtn    : 'linked',
-                language    : 'en',
-                initialDate : '<?php echo ($end_date); ?>',
-                fontAwesome : true,
-            });
+<script src="/yuyaye/Public/libs/chart/acharts_min.js"></script>
+<!-- https://g.alicdn.com/bui/acharts/1.0.29/acharts-min.js -->
+ 
+ 
+  <script type="text/javascript">
+        var chart = new AChart({
+          theme : AChart.Theme.SmoothBase,
+          id : 'canvas',
+          width : 950,
+          height : 500,
+          plotCfg : {
+            margin : [50,50,80] //画板的边距
+          },
+          xAxis : {
+            categories: [
+            <?php  foreach ($file_type as $key => $value) { echo' "'.$value.'", '; } ?>
+            ],
+            labels : {
+              label : {
+                rotate : -45,
+                'text-anchor' : 'end'
+              }
+            }
+          },
+          yAxis : {
+            min : 0
+          },
+          seriesOptions : { //设置多个序列共同的属性
+            /*columnCfg : { //公共的样式在此配置
+ 
+            }*/
+          },
+          tooltip : {
+            valueSuffix : 'm'
+          },
+          series : [ {
+            name: 'Africa',
+            type : 'column',
+            data: [  
+            <?php  foreach ($file_data as $key => $value) { $value= $value/1024; echo' '.$value.', '; } ?>
+              ],
+            labels : { //显示的文本信息
+              label : {
+                rotate : -90,
+                y : 10,
+                'fill' : '#fff',
+                'text-anchor' : 'end',
+                textShadow: '0 0 3px black',
+                'font-size' : '14px'
+              }
+            }
+ 
+          }]
+ 
         });
-    </script>
+ 
+        chart.render();
+      </script>
 
         </div>
     </div>
