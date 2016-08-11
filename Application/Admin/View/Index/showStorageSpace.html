@@ -1,0 +1,89 @@
+<extend name="Public/layout"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CUI__/css/cui.extend.min.css">
+</block>
+<block name='left-nav'>
+        <include file="./Application/Admin/View/Public/leftnav.html" />
+</block>
+<block name="main">
+                     <div role="tabpanel" class="fade in active" id="home">
+                     
+                                   <div id="canvas">
+ 
+                                    </div>
+                    </div>
+</block>
+
+<block name="script">
+
+<script src="__PUBLIC__/libs/chart/acharts_min.js"></script>
+<!-- https://g.alicdn.com/bui/acharts/1.0.29/acharts-min.js -->
+ 
+ 
+  <script type="text/javascript">
+        var chart = new AChart({
+          theme : AChart.Theme.SmoothBase,
+          id : 'canvas',
+          width : 950,
+          height : 500,
+          plotCfg : {
+            margin : [50,50,80] //画板的边距
+          },
+          xAxis : {
+            categories: [
+            <?php 
+                   foreach ($file_type as $key => $value) {
+
+                        echo' "'.$value.'", ';
+                    }
+              ?>
+            ],
+            labels : {
+              label : {
+                rotate : -45,
+                'text-anchor' : 'end'
+              }
+            }
+          },
+          yAxis : {
+            min : 0
+          },
+          seriesOptions : { //设置多个序列共同的属性
+            /*columnCfg : { //公共的样式在此配置
+ 
+            }*/
+          },
+          tooltip : {
+            valueSuffix : 'm'
+          },
+          series : [ {
+            name: 'Africa',
+            type : 'column',
+            data: [  
+            <?php 
+                   foreach ($file_data as $key => $value) {
+                     $value= $value/1024;
+                        echo' '.$value.', ';
+                    }
+              ?>
+              ],
+            labels : { //显示的文本信息
+              label : {
+                rotate : -90,
+                y : 10,
+                'fill' : '#fff',
+                'text-anchor' : 'end',
+                textShadow: '0 0 3px black',
+                'font-size' : '14px'
+              }
+            }
+ 
+          }]
+ 
+        });
+ 
+        chart.render();
+      </script>
+</block>
+     
