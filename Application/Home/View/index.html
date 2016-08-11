@@ -1,1 +1,536 @@
- 
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CUI__/css/cui.min.css">
+      <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+      <link href="__PUBLIC__/css/mystyle.css" rel="stylesheet">
+</head>
+<body style="background-color: #EBEBEB;">
+  <nav class="navbar navbar-default  " style="margin-bottom: 0px;">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header" style="height: 80px;">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">
+        <span style="font-size: 18px;color: #3EA9F5;">Yuyaye</span>
+        <span>Lab</span></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="margin-top:15px;"><b><span style="font-size: 26px;color: #3EA9F5;">Yuyaye</span><span style="font-size: 26px;color: #A5AEB4">Lab</span></b></a>&nbsp;
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="height: 80px;">
+        <ul class="nav navbar-nav">
+          <foreach name="nav" item="vo" >
+            <if  condition="count($vo['select']) GT 0 ">
+              <li class="dropdown" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style=  "margin-top:15px;">{$vo['nav_name']}
+                <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <foreach name="vo['select']" item="vos" >
+                  <li><a href="{$vos['nav_href']}"> {$vos['nav_name']}</a></li>
+                  </foreach>
+                </ul>
+              </ll>
+              <else /> 
+                <li style="margin-top: 15px;"><a href="{$vo['nav_href']}">{$vo['nav_name']}</a></li>
+            </if>
+          </foreach>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 15px">
+          <?php if(is_login())echo '
+            <li ><a href="'.U('User/complete').'" >你好'.$user_auth['nickname'].'</a></li>
+            <a class="btn btn-default "  href="'.U('User/logout').'" style="margin-top:10px;">注销</a>';
+            else echo '
+            <a class="btn btn-default theme-login" href="javascript:;" role="button" style="margin-top:10px;">登录</a>
+            <a  class="btn btn-default theme-register"  href="javascript:;" role="button" style="margin-top:10px;">注册</a>';
+          ?>
+        <a class="btn btn-default theme-register-info" href="javascript:;" role="button" style="margin-top:10px">指标服务器注册</a>
+        <a class="btn btn-default theme-register-obj" href="javascript:;" role="button" style="margin-top:10px">事务服务器注册</a>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>  
+
+  <div class="jumbotron" style="background: #283D7C">
+    <div class="container" > 
+      <div class="col-xs-6 col-md-2">
+        <img src="__PUBLIC__/image/aim_new.jpg" alt="...">
+      </div>
+      <div class="col-xs-6  col-md-2">
+        <!--<a href="http://www.dlmu.edu.cn"><img src="__PUBLIC__/image/bg_header.jpg" alt="大连海事大学" style="margin-left:15px;margin-bottom:20px"></a>-->    
+        <a href="http://202.118.83.209:8080"><img src="__PUBLIC__/image/leftlogo.jpg" alt="..." ></a>
+      </div>
+      <div class="col-xs-12  col-md-7 col-md-offset-1">
+        <h2 style="color: #fff;font-size: 35px;float:left">网络安全与信息服务体系研究室 </h2>
+        <div style="float:right">
+          <a href="http://www.dlmu.edu.cn"><img src="__PUBLIC__/image/bg_header.jpg" alt="大连海事大学"></a>
+        </div>
+        <p style="color: #fff;clear:both">Network Security and Information Service Architecture Lab </p>
+      </div>
+    </div>
+  </div>
+  <div class="container" >
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class=" link">
+          <div class="widget">
+            <h4 class="title"> <span class="glyphicon glyphicon-tags" style="margin-right: 30px"></span>快捷链接</h4>
+            <div class="content tag-cloud">
+              <foreach name="link" item="vo" >
+                <a href="{$vo['link_href']}"  >{$vo['link_name']}</a>
+              </foreach>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 ">
+        <h3 class="inform-title"><span class="glyphicon glyphicon-list-alt" style="margin-right: 30px"></span>最近通知</h3>
+        <foreach name="inform" item="vo" >
+          <div class="col-md-12 inform">
+            <div class="inform">
+              <p class="head">{$vo['inform_title']}</p>
+              <p class="time">{$vo['begin_time']}</p>
+              <div class="content">
+                {$vo['inform_brief']}
+              </div>
+              <a class="btn btn-default inform-btn" href="{$vo['inform_url']}" role="button">阅读详细</a>
+            </div>
+          </div>
+        </foreach>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!--footer start-->
+    <div class="footer" >
+      <div class="container" >
+        <div class="row">
+          <div class="col-sm-6 col-lg-6">              
+            <p class="text-muted">网络安全与信息服务体系研究室隶属于信息科学技术学院， 自成立以来，研究室一直致力于网络安全理论及技术研究，本研究室主要为网络安全等专业研究生的实验及科研服务，目前实验室每年为不同年级的学生开设实验项目。 研究室主要研究方向：身份认证、大数据组织、授权方式及隐私保护等。</p>
+          </div>
+          <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row">
+                <!-- 底部导航 开始 -->
+              <div class="col-xs-4 footnav-list">
+                <h4><a>关于</a></h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">关于我们</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">加入我们</a>
+                  </li>                                                
+                </ul>
+              </div>
+              <div class="col-xs-4 footnav-list">
+                <h4><a>帮助</a></h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">用户协议</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">意见反馈</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">常见问题</a>
+                  </li>                                                
+                </ul>
+              </div>
+              <div class="col-xs-4 footnav-list">
+                <h4><a>联系方式</a></h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">联系我们</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="text-muted" href="#">办公地址</a>
+                  </li>                                               
+                </ul>
+              </div>                                        <!-- 底部导航 结束 -->
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <ul class="list-inline text-center">
+            <li><span class="copyright">Copyright © 大连海事大学启航工作室 All rights reserved.</span></li>
+            <li><a class="icp" href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备1502009-2号</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--footer end-->
+    <!-- jQuery -->
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <!--register and login template-->
+    <script>
+      jQuery(document).ready(function($) {
+        $('.theme-login').click(function(){
+          $('.theme-popover-mask').fadeIn(100);
+          $('.theme-popover-login').slideDown(200);
+        })
+        $('.theme-poptit .close').click(function(){
+          $('.theme-popover-mask').fadeOut(100);
+          $('.theme-popover-login').slideUp(200);
+        })
+        $('.theme-register').click(function(){
+          $('.theme-popover-mask').fadeIn(100);
+          $('.theme-popover-register').slideDown(200);
+        })
+        $('.theme-poptit .close').click(function(){
+          $('.theme-popover-mask').fadeOut(100);
+          $('.theme-popover-register').slideUp(200);
+        })
+        $('.theme-register-obj').click(function(){
+          $('.theme-popover-mask').fadeIn(100);
+          $('.theme-popover-register-obj').slideDown(200);
+        })
+        $('.theme-poptit .close').click(function(){
+          $('.theme-popover-mask').fadeOut(100);
+          $('.theme-popover-register-obj').slideUp(200);
+        })
+        $('.theme-register-info').click(function(){
+          $('.theme-popover-mask').fadeIn(100);
+          $('.theme-popover-register-info').slideDown(200);
+        })
+        $('.theme-poptit .close').click(function(){
+          $('.theme-popover-mask').fadeOut(100);
+          $('.theme-popover-register-info').slideUp(200);
+        })
+      })
+    </script>
+
+    <!--登录 start-->
+    <div class="theme-popover-login ">
+      <div class="theme-poptit">
+        <a href="javascript:;" title="关闭" class="close">×</a>
+        <h4>登录 是一种态度</h4>
+      </div>
+      <br>
+      <form class="form-horizontal"  action="{:U('User/login')}" method="post">
+        <div class="form-group">
+          <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default  ">登录</button>
+          </div>
+        </div>
+      </form>
+    </div>
+<!--登录 end-->
+
+<!--注册 start-->
+    <div class="theme-popover-register">
+      <div class="theme-poptit">
+        <a href="javascript:;" title="关闭" class="close">×</a>
+        <h4>注册 是一种精神</h4>
+      </div>
+      <br>
+      <form class="form-horizontal reg-form-username-modal"  action="{:U('User/register')}" method="post">
+        <fieldset>
+          <input type="hidden"  name="reg_type" value="username">
+          <div class="form-group">
+            <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">重复密码</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="inpuRepassword" placeholder="Password" name="repassword">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">验证码</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="verify"  name="verify">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">验证图片</label>
+            <div class="col-sm-8 reload-verify">
+              <img src="{:U('User/verify')}" class="verifyimg">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">注册</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <!--注册 end-->
+    <script type="text/javascript" src="__PUBLIC__/libs/jquery/1.x/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // 刷新验证码
+             $(".reload-verify").click(function(event) {
+               var verifyimg = $(".verifyimg").attr("src");
+                if (verifyimg.indexOf('?') > 0) {
+                    $(".verifyimg").attr("src", verifyimg + '&random=' + Math.random());
+                } else {
+                    $(".verifyimg").attr("src", verifyimg.replace(/\?.*$/, '') + '?' + Math.random());
+                }
+             });
+           });
+    </script>
+    <!--指标服务器注册 start-->
+    <div class="theme-popover-register-info">
+      <div class="theme-poptit">
+        <a href="javascript:;" title="关闭" class="close">×</a>
+        <h4>注册--指标服务器</h4>
+      </div>
+      <br>
+      <form class="form-horizontal" action="{:U('Index/serverlogin2')}" method="post">
+        <div class="form-group">
+          <label for="inputInfo1" class="col-sm-2 control-label">info1</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo1" placeholder="Info1" name="info1">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo2" class="col-sm-2 control-label">info2</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo2" placeholder="Info2" name="info2">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo3" class="col-sm-2 control-label">info3</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo3" placeholder="Info3" name="info3">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo4" class="col-sm-2 control-label">info4</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo4" placeholder="Info4" name="info4">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">注册</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<!--事指标服务器注册 end-->
+
+<!--事物服务器注册 start-->
+  <div class="theme-popover-register-obj" >
+    <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h4>注册--事物服务器</h4>
+    </div>
+    <br>
+    <form class="form-horizontal" action="{:U('Index/serverlogin1')}" mothod='post'>
+      <div class="form-group">
+        <label for="inputInfo1" class="col-sm-2 control-label">info1</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo1" placeholder="Info1" name="info1">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo2" class="col-sm-2 control-label">info2</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo2" placeholder="Info2" name="info2">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo3" class="col-sm-2 control-label">info3</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo3" placeholder="Info3" name="info3">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo4" class="col-sm-2 control-label">info4</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo4" placeholder="Info4" name="info4">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputInfo5" class="col-sm-2 control-label">info5</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputInfo5" placeholder="Info5" name="info5">
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">注册</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<!--事物服务器注册 end-->
+
+  <div class="theme-popover-mask"></div>
+  <script type="text/javascript" src="__PUBLIC__//libs/bootstrap_validator/js/bootstrapValidator.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+        // 表单验证－用户名
+        $('.theme-popover-register').bootstrapValidator({
+            feedbackIcons: {
+                valid: 'fa fa-check',
+                invalid: 'fa fa-remove',
+                validating: 'fa fa-refresh'
+            },
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入用户名'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '用户名长度为6到30个字符'
+                        },
+                        regexp: {
+                            regexp: /^(?!_)(?!\d)(?!.*?_$)[\w]+$/,
+                            message: '用户名只可含有数字、字母、下划线且不以下划线开头结尾，不以数字开头！'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入密码'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '密码长度为6到30个字符'
+                        },
+                        regexp: {
+                            regexp: /(?!^(\d+|[a-zA-Z]+|[~!@#$%^&*()_+{}:"<>?\-=[\];\',.\/]+)$)^[\w~!@#$%^&*()_+{}:"<>?\-=[\];\',.\/]+$/,
+                            message: '密码需包含字母、数字、符号中的两种'
+                        }
+                    }
+                },
+                verify: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入验证码'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+<script type="text/javascript">
+
+  $('.form-horizontal').submit(function() {
+    // 提交表单
+    $url=$(this).attr('action');
+    $.ajax({
+        url: $url,
+        type: 'POST',
+        dataType: 'json',
+        data: $(this).serialize(),
+    })
+    .done(function(data) {
+        console.log(data);
+      if(data.status===0){ 
+        $('.growl').remove();
+          var boarddiv = "<div class='growl'><div class='alert-error'>"+data.info+"<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+      $(document.body).append(boarddiv); 
+        $('.close').click(function(event) {
+   $('.growl').remove();
+    });
+      }
+      else{
+         $('.growl').remove();
+            var boarddiv = "<div class='growl'><div class='alert-success'>"+data.info+"<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+          $(document.body).append(boarddiv); 
+          $('.close').click(function(event) {
+            $('.growl').remove();
+          });
+        if(data.url!='')location.href=data.url;    
+        }
+    })
+    .fail(function() {
+        $('.growl').remove();
+          var boarddiv = "<div class='growl'><div class='alert-error'>请检查网络<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+      $(document.body).append(boarddiv); 
+        $('.close').click(function(event) {
+   $('.growl').remove();
+    });
+    })
+    .always(function() {
+       
+    });
+    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
+    return false;
+   });
+       $('.logout').click(function(event) {
+            $url=$(this).attr('href');
+    $.ajax({
+        url: $url,
+        type: 'POST',
+        dataType: 'json',
+    })
+    .done(function(data) {
+        console.log(data);
+      if(data.status===0){ 
+        $('.growl').remove();
+          var boarddiv = "<div class='growl'><div class='alert-error'>"+data.info+"<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+      $(document.body).append(boarddiv); 
+        $('.close').click(function(event) {
+   $('.growl').remove();
+    });
+      }
+      else{
+         $('.growl').remove();
+            var boarddiv = "<div class='growl'><div class='alert-success'>"+data.info+"<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+          $(document.body).append(boarddiv); 
+          $('.close').click(function(event) {
+            $('.growl').remove();
+          });
+        if(data.url!='')location.href=data.url;    
+        }
+    })
+    .fail(function() {
+        $('.growl').remove();
+          var boarddiv = "<div class='growl'><div class='alert-error'>请检查网络<a class='close' herf=''><span class='fa fa-times-circle-o'></span></a></div></div>"; 
+      $(document.body).append(boarddiv); 
+        $('.close').click(function(event) {
+   $('.growl').remove();
+    });
+    })
+    .always(function() {
+   
+    });
+    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
+    return false;
+          });
+
+</script>
